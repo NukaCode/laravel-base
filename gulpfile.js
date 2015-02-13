@@ -1,0 +1,145 @@
+var elixir = require('laravel-elixir');
+
+/*
+ |--------------------------------------------------------------------------
+ | Elixir Asset Management
+ |--------------------------------------------------------------------------
+ |
+ | Elixir provides a clean, fluent API for defining some basic Gulp tasks
+ | for your Laravel application. By default, we are compiling the Less
+ | file for our application, as well as publishing vendor resources.
+ |
+ */
+
+elixir(function(mix) {
+ mix.less('app.less')
+  // Java script
+     .publish(
+     'jquery/dist/jquery.min.js',
+     'public/js/vendor/jquery.js'
+ )
+     .publish(
+     'jquery-ui/jquery-ui.min.js',
+     'public/js/vendor/jquery-ui.js'
+ )
+     .publish(
+     'bootstrap/dist/js/bootstrap.min.js',
+     'public/js/vendor/bootstrap.js'
+ )
+     .publish(
+     'messenger/build/js/messenger.min.js',
+     'public/js/vendor/messenger.js'
+ )
+     .publish(
+     'messenger/build/js/messenger-theme-future.js',
+     'public/js/vendor/messenger-theme-future.js'
+ )
+     .publish(
+     'bootbox/bootbox.js',
+     'public/js/vendor/bootbox.js'
+ )
+     .publish(
+     'select2/select2.min.js',
+     'public/js/vendor/select2.js'
+ )
+     .publish(
+     'metisMenu/dist/metisMenu.min.js',
+     'public/js/vendor/metisMenu.js'
+ )
+     .publish(
+     'mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js',
+     'public/js/vendor/bootstrap-colorpicker.js'
+ )
+     .publish(
+     'jasny-bootstrap/dist/js/jasny-bootstrap.min.js',
+     'public/js/vendor/jasny-bootstrap.js'
+ )
+     .scripts(
+     [
+      'public/js/vendor/jquery.js',
+      'public/js/vendor/bootstrap.js',
+      'public/js/vendor/messenger.js',
+      'public/js/vendor/messenger-theme-future.js',
+      'public/js/vendor/bootbox.js',
+      'public/js/vendor/select2.js'
+     ]
+ )
+     .scripts(
+     [
+      'public/js/vendor/jquery.js',
+      'public/js/vendor/bootstrap.js',
+      'public/js/vendor/messenger.js',
+      'public/js/vendor/messenger-theme-future.js',
+      'public/js/vendor/bootbox.js',
+      'public/js/vendor/select2.js',
+      'public/js/vendor/metisMenu.js'
+     ], 'public/', 'public/js/admin-all.js'
+ )
+  // CSS
+     .publish(
+     'font-awesome/css/font-awesome.min.css',
+     'public/css/vendor/font-awesome.css'
+ )
+     .publish(
+     'messenger/build/css/messenger.css',
+     'public/css/vendor/messenger.css'
+ )
+     .publish(
+     'messenger/build/css/messenger-theme-future.css',
+     'public/css/vendor/messenger-theme-future.css'
+ )
+     .publish(
+     'select2/select2.css',
+     'public/css/vendor/select2.css'
+ )
+     .publish(
+     'select2-bootstrap3-css/select2-bootstrap.css',
+     'public/css/vendor/select2-bootstrap.css'
+ )
+     .publish(
+     'jasny-bootstrap/dist/css/jasny-bootstrap.min.css',
+     'public/css/vendor/jasny-bootstrap.min.css'
+ )
+     .publish(
+     'mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css',
+     'public/css/vendor/colorpicker/css/bootstrap-colorpicker.min.css'
+ )
+     .publish(
+     'metisMenu/dist/css/metisMenu.css',
+     'public/css/vendor/metisMenu.css'
+ )
+     .publish(
+     'nukacode-admin/css/admin.css',
+     'public/css/vendor/admin.css'
+ )
+     .styles(
+     [
+      'public/css/app.css',
+      'public/css/vendor/font-awesome.css',
+      'public/css/vendor/messenger.css',
+      'public/css/vendor/messenger-theme-future.css',
+      'public/css/vendor/select2.css',
+      'public/css/vendor/select2-bootstrap.css',
+     ]
+ )
+     .styles(
+     [
+      'public/css/vendor/admin.css',
+      'public/css/vendor/font-awesome.css',
+      'public/css/vendor/messenger.css',
+      'public/css/vendor/messenger-theme-future.css',
+      'public/css/vendor/select2.css',
+      'public/css/vendor/select2-bootstrap.css',
+      'public/css/vendor/metisMenu.css'
+     ], 'public/', 'public/css/admin-all.css'
+ )
+  // Extras
+     .publish(
+     'font-awesome/fonts',
+     'public/fonts'
+ )
+     .publish(
+     'mjolnic-bootstrap-colorpicker/dist/img',
+     'public/css/vendor/colorpicker/img'
+ )
+});

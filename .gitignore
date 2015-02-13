@@ -1,0 +1,8 @@
+/vendor
+.env
+/node_modules
+.DS_Store
+/.idea
+._*
+/tests/_log/*
+tests/_output/*
