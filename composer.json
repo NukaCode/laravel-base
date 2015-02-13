@@ -39,9 +39,7 @@
 		],
 		"post-create-project-cmd": [
 			"php -r \"copy('.env.example', '.env');\"",
-			"php artisan key:generate",
-		  	"sudo npm install",
-		  	"bower install"
+			"php artisan key:generate"
 		]
 	},
 	"config": {
