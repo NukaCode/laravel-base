@@ -1,5 +1,5 @@
-<html>
-<head>
+@section('css')
+    @parent
     <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
     <style>
@@ -15,9 +15,9 @@
         }
 
         .container {
-            text-align:     center;
-            display:        table-cell;
             vertical-align: middle;
+            padding-top: 50px;
+            text-align: center;
         }
 
         .content {
@@ -38,8 +38,8 @@
             font-size: 24px;
         }
     </style>
-</head>
-<body>
+@stop
+
 <div class="container">
     <div class="content">
         <div class="title">Laravel 5</div>
@@ -47,5 +47,3 @@
         <div class="quote">{{ Inspiring::quote() }}</div>
     </div>
 </div>
-</body>
-</html>
