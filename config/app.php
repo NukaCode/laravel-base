@@ -154,6 +154,8 @@ return [
 		'NukaCode\Core\Ajax\AjaxServiceProvider',
 		'NukaCode\Menu\MenuServiceProvider',
 
+		'Illuminate\Html\HtmlServiceProvider'
+
 	],
 
 	/*

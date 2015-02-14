@@ -7,9 +7,10 @@
 	"require": {
 		"laravel/framework": "5.0.*",
 	  	"illuminate/html": "5.0.*",
-	  	"nukacode/core": "~2.0",
-	  	"nukacode/menu": "~0.2"
-	},
+        "filp/whoops": "~1.0",
+        "nukacode/core": "~2.0",
+        "nukacode/menu": "~0.2"
+    },
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
 		"phpspec/phpspec": "~2.1"

@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         @section('css')
-            {{ HTML::style('css/all.css') }}
+            {{--{{ HTML::style('css/all.css') }}--}}
         @show
     </head>
     <body>
@@ -14,7 +14,7 @@
         @endif
 
         @section('js')
-            {{ HTML::style('js/all.js') }}
+            {{ HTML::script('js/all.js') }}
         @show
 
     </body>
