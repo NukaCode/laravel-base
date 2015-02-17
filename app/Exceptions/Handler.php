@@ -50,6 +50,12 @@ class Handler extends ExceptionHandler {
 			return $this->renderExceptionWithWhoops($e);
 		}
 
+	        $status = $e->getCode();
+	        if (view()->exists("errors.{$status}"))
+	        {
+	            return response()->view("errors.{$status}", [], $status);
+	        }
+
 		return parent::render($request, $e);
 	}
 
