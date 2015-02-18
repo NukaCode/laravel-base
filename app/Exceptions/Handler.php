@@ -39,18 +39,23 @@ class Handler extends ExceptionHandler {
 	 */
 	public function render($request, Exception $e)
 	{
-		if ($this->isHttpException($e))
-		{
-			return $this->renderHttpException($e);
-		}
+	        if (config('app.debug'))
+	        {
+	            return $this->renderExceptionWithWhoops($e);
+	        }
+	
+	        if ($this->isHttpException($e))
+	        {
+	            return $this->renderHttpException($e);
+	        }
+	
+	        $status = $e->getCode();
+	        if (view()->exists("errors.{$status}"))
+	        {
+	            return response()->view("errors.{$status}", [], $status);
+	        }
 
-
-		if (config('app.debug'))
-		{
-			return $this->renderExceptionWithWhoops($e);
-		}
-
-		return parent::render($request, $e);
+		return $this->render($request, $e);
 	}
 
 	/**
