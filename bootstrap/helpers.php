@@ -103,15 +103,53 @@ function routeIs($controller, $justActive = false)
 
 function routeActive($route, $children = [], $simple = false)
 {
-	$currentRoute = Route::getCurrentRoute()->getName();
+    $found        = false;
+    $currentRoute = Route::getCurrentRoute()->getName();
 
-	if ($route == $currentRoute || in_array($currentRoute, $children)) {
-		if ($simple) {
-			return "active";
-		} else {
-			return "class='active'";
-		}
-	}
+    if ($children instanceof Illuminate\Support\Collection) {
+        $children = $children->toArray();
+    }
+
+    if ($route == $currentRoute || in_array($currentRoute, $children)) {
+        $found = true;
+    } elseif (substr($route, -1) == '*' && checkPartialRoute($route, $currentRoute) == true) {
+        $found = true;
+    } else {
+        foreach ($children as $child) {
+            if (checkPartialRoute($child, $currentRoute) == true) {
+                $found = true;
+                break;
+            }
+        }
+    }
+
+    if ($found == true) {
+        if ($simple) {
+            return "active";
+        } else {
+            return "class='active'";
+        }
+    }
+}
+
+/**
+ * @param $route
+ * @param $currentRoute
+ *
+ * @return array
+ */
+function checkPartialRoute($route, $currentRoute)
+{
+    $routeParts = explode('.', $currentRoute);
+    $wildCard   = array_pop($routeParts);
+
+    $currentRoute = implode('.', $routeParts) . '.';
+
+    if (substr($route, 0, -1) == $currentRoute) {
+        return true;
+    }
+
+    return false;
 }
 
 function percent($num_amount, $num_total)
