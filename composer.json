@@ -1,6 +1,6 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
+	"name": "nukacode/laravel-base",
+	"description": "Base framework for NukaCode packages.",
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"type": "project",
