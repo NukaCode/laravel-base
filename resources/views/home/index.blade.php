@@ -10,8 +10,6 @@
             height:      100%;
             color:       #B0BEC5;
             display:     table;
-            font-weight: 100;
-            font-family: 'Lato';
         }
 
         .container {
@@ -27,15 +25,21 @@
 
         .title {
             font-size:     96px;
+            font-weight: 100;
+            font-family: 'Lato';
         }
 
         .sub-title {
             font-size: 35px;
             margin-bottom: 40px;
+            font-weight: 100;
+            font-family: 'Lato';
         }
 
         .quote {
             font-size: 24px;
+            font-weight: 100;
+            font-family: 'Lato';
         }
     </style>
 @stop
