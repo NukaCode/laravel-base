@@ -16,7 +16,7 @@ class User extends BaseModel implements AuthenticatableContract,
                                         AuthorizableContract,
                                         CanResetPasswordContract
 {
-    use Authenticatable, Authorizable, CanResetPassword, HasRoles, SoftDeletes;
+    use Authenticatable, Authorizable, CanResetPassword, SoftDeletes;
 
     protected $table = 'users';
 
