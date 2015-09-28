@@ -1,0 +1,14 @@
+/vendor
+/node_modules
+Homestead.yaml
+Homestead.json
+.env
+/.idea
+/resources/assets/css/vendor
+/resources/assets/css/app.css
+/resources/assets/css/app.css.map
+/resources/assets/js/vendor
+/public/css
+/public/js
+
+resources/assets/css/app.css

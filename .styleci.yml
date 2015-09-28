@@ -1,0 +1,12 @@
+preset: laravel
+
+linting: true
+
+enabled:
+  - align_double_arrow
+  - align_equals
+  - ordered_use
+
+disabled:
+  - unalign_equals
+  - concat_without_spaces
